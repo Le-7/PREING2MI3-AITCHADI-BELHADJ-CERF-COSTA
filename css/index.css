@@ -1,0 +1,53 @@
+*{   /*Pour retirer les margin par défaut du body*/
+    margin: 0;
+    padding: 0;
+    }
+    header {
+        background-color: #e6ccb2;
+        height: 90px;
+        /*text-shadow: #000 0 0 .2em;*/
+    }
+
+    header>h1 {             /*Pour mettre les propriétés du h1 du header plus facilement/spécifiquement*/
+        color:grey;
+        text-align: center;
+    }
+.imageH{
+    position: absolute;
+}
+
+aside{
+   height: 650px;
+    margin: 0px 0px 0px 100px;
+    background-color: #ddb892;
+    text-align: center;
+}
+
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #e6ccb2;;
+    color: white;
+    text-align: center;
+ }
+
+
+  .menuG {
+        float: left;
+        margin: 0px 0px 0px 0px;
+        /*padding: 0px 0px 150px 0px*/
+        height: 650px;
+        width: 300px;
+        position: relative;
+        background-color: #a5907f;
+    
+}
+
+.menu{
+    text-align: center;
+}
