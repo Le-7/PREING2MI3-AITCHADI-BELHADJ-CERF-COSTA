@@ -1,0 +1,98 @@
+/*CSS 
+AIT CHADI Anissa, BELLHAJ Dillan, CERF Fabien, COSTA Mathéo
+PRÉING2 MI 3*/
+
+
+*{   /*Pour retirer les margin par défaut du body*/
+    margin: 0;
+    padding: 0; }
+
+header    {
+        background-color: #e6ccb2;       
+         }
+.nul{
+    
+    display: flex;          
+    justify-content: center; 
+    align-items: center;
+}
+
+header>h1 {             /*Pour mettre les propriétés du h1 du header plus facilement/spécifiquement*/
+        color:grey;
+        text-align: center;
+        padding-top: 1%;
+        /*padding-bottom: 7%;*/ }
+
+
+        
+.conex{
+    text-align: right;
+    padding-right: 2%;
+    
+}
+
+.menuH{
+   
+    display: flex;
+    color:rgb(61, 59, 40);
+  
+    
+}
+.menuH ul {
+    text-align: center;
+    list-style-type: none;
+    width: 100%;
+    display: table;
+   
+}
+.menuH li {
+    display: inline-block;
+    float:none;
+   margin: 1%;
+}
+
+
+#logo{
+    position: absolute;
+left: 0;
+top:0; }
+
+main{
+  
+  
+    width: 70%;
+  /*height: 650px;
+    margin: 0px 0px 0px 100px;*/
+    background-color: #ddb892;
+    text-align: center; }
+
+
+footer {
+ 
+    
+    background-color: #e6ccb2;;
+    color: white;
+    text-align: center; }
+
+
+
+
+/*.menuG*/ nav {
+   
+     width: 30%;
+       /* margin: 0px 0px 0px 0px;
+        /*padding: 0px 0px 150px 0px
+        height: 650px;
+        width: 300px;*/
+        
+     background-color: #a5907f; }
+
+.menu{
+    text-align: center; }
+
+.milieu{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc(100vh - 185px);
+}
