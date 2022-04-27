@@ -9,8 +9,17 @@
 <body>
        
     <header>
+
+        <div class="nvo">
+            <img src="/projet/img/logo.jpg" alt="logo" id="logo" >
+        </div>
     <div class="nul">
-       <h1>SITE POUR FAIRE DU BIFFFF </h1> 
+    <div class="conex">Connexion <br><br> Panier</div>
+    <h1>SITE POUR FAIRE DU BIFFFF </h1> 
+  
+    
+    
+       
        <div class="menuH">
                 <ul>
                     <li><a href="#">Accueil</a></li>
@@ -20,9 +29,14 @@
                     <li>Contact</li>
                 </ul>
             </div>
-            </div>
-        <div class="conex">Connexion <br><br> Panier</div>
-       <!--  <img src="/projet/img/logo.png" alt="logo" id="logo" width="90" height="90">-->
+</div>
+    
+
+    
+        
+          
+       
+      
     </header>
         <div class="milieu">
        <nav>
