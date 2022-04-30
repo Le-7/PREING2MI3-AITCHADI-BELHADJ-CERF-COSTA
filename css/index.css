@@ -12,7 +12,8 @@ html{
         height: 100%;}
 
 body{
-    height: 100%;}
+    height: 100%;
+    }
 
                                 /*On créé un div qui contient tous les éléments du Body pour que ca fasse la taille entière*/
 .contenu {
@@ -22,7 +23,8 @@ body{
 
 header    {
         background-color: #e6ccb2; 
-        display: flex; }
+        display: flex;
+         }
                                 /*Div pour le menu et le titre dans le header pour que ce soit affiché l'un en dessous de l'autre*/
 .nul{
     width: 100%;
@@ -99,7 +101,7 @@ h1 {                             /*Pour mettre les propriétés du h1 du header 
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        height: calc(100vh - 19vh); /*Je pense qu'il faut reussir a modifier ca pcq c ca qui pose pb pour le footer*/
+        height: 70vh; /*Je pense qu'il faut reussir a modifier ca pcq c ca qui pose pb pour le footer*/
     }
 
 main{                               /*Partie de droite*/
