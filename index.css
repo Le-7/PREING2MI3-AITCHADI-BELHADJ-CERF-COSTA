@@ -1,0 +1,124 @@
+/*CSS 
+AIT CHADI Anissa, BELLHAJ Dillan, CERF Fabien, COSTA Mathéo
+PRÉING2 MI 3*/
+
+
+*{                              /*Pour retirer les margin par défaut du body*/
+    margin: 0;
+    padding: 0; }
+
+                                /*Pour faire en sorte que l'affichage prenne la taille de l'écran*/
+html{
+        height: 100%;}
+
+body{
+    height: 100%;}
+
+                                /*On créé un div qui contient tous les éléments du Body pour que ca fasse la taille entière*/
+.contenu {
+    min-height: 100%;
+    position: relative;
+}
+
+header    {
+        background-color: #e6ccb2; 
+        display: flex; }
+                                /*Div pour le menu et le titre dans le header pour que ce soit affiché l'un en dessous de l'autre*/
+.nul{
+    width: 100%;
+    flex-direction: column;       
+    justify-content: center; 
+    align-items: center;
+}
+
+#logo{
+    width: 100%;                 /*Taille max du div créé exprès pour que le logo prenne bien la taille du header*/
+    height: 100%; }
+
+h1 {                             /*Pour mettre les propriétés du h1 du header plus facilement/spécifiquement*/
+        color:grey;
+        text-align: center;
+        padding-top: 1%;
+        }
+
+.conex{                          /*Div pour l'espace de connexion et le pannier, alignés à droite*/
+    float: right;
+    width: max-content;
+    /*text-align: right;*/
+    padding-top: 1.5%;
+    padding-right: 1.5%; 
+}
+
+.connexion{                      /*Div pour les caractéristiques provisoires du "bouton" connexion*/
+    background-color: lightgray;
+    border-style: solid;
+    border-color: black;
+    border-top-right-radius: 10px;             /*Arrondi en haut à droite*/
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;         /*Arrondi en haut à droite*/
+    border-bottom-left-radius: 10px;
+    text-align: center; }
+
+.panier{                             /*Div pour les caractéristiques provisoires du "bouton" pannier*/
+    background-color: lightgray;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-top-right-radius: 10px;             /*Arrondi en haut à droite*/
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;         /*Arrondi en haut à droite*/
+    border-bottom-left-radius: 10px; }
+
+.menuH{                              /*Menu Horizontal du header*/
+    
+   padding-top: 1.7%;
+    display: flex;
+    color:rgb(61, 59, 40); }
+
+.menuH ul {                         /*Caractéristiques du menu pour affichage horizontal sans puces*/
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    width: 100%; }
+
+.menuH ul li {                       /*Caractéristiques provisoires du menu (j'ai mis ca en attendant de changer)*/
+    width: 140px;
+    display: inline-block;                 /*Mise en forme*/
+    background-image:linear-gradient(to right, grey, orange); /*Dégradé pour la couleur de fond*/
+    border-bottom: 4px black solid;        /*Bordure simple noire sous les premiers éléments*/
+    border-top-right-radius: 10px;         /*Arrondi en haut à droite*/
+    border-top-left-radius: 10px;   
+}
+
+.menuH li {                          /*Caractéristiques provisoires du menu*/
+    display: inline-block;
+    float:none;
+    font-family: 'Courier New', Courier, monospace; }
+
+.milieu{                              /*Div pour l'espace du milieu entre header et footer*/
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: calc(100vh - 19vh); /*Je pense qu'il faut reussir a modifier ca pcq c ca qui pose pb pour le footer*/
+    }
+
+main{                               /*Partie de droite*/
+    width: 70%;
+    background-color: #ddb892;
+    text-align: center; }
+
+nav {                                /*Partie de gauche*/
+        width: 30%; 
+        background-color: #a5907f; }
+
+.menu{                              /*Menu vertical de la partie de gauche*/
+      text-align: center; }
+   
+footer {                             /*Footer*/
+    width: 100%;
+    height: auto;
+    position:relative;
+    bottom: 0;
+    background-color: #e6ccb2;
+    color: white;
+    text-align: center; }
