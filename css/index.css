@@ -3,124 +3,357 @@ AIT CHADI Anissa, BELLHAJ Dillan, CERF Fabien, COSTA Mathéo
 PRÉING2 MI 3*/
 
 
-*{                              /*Pour retirer les margin par défaut du body*/
+
+* {                              /*Pour retirer les margin par défaut du body*/
     margin: 0;
     padding: 0; }
 
-                                /*Pour faire en sorte que l'affichage prenne la taille de l'écran*/
-html{
-        height: 100%;}
+                                /*Pour faire en sorte que l'affichage prenne la taille de l'écran
+                                 background: linear-gradient(to right, transparent, 30%, rgb(247, 212, 208))*/
+html {
+    height: 100%;}
 
-body{
-    height: 100%;
-    }
+body {
+    height: 100%; }
 
                                 /*On créé un div qui contient tous les éléments du Body pour que ca fasse la taille entière*/
 .contenu {
     min-height: 100%;
     position: relative;
+    background:rgb(250, 238, 238);
+
+    
 }
 
-header    {
-        background-color: #e6ccb2; 
-        display: flex;
-         }
+header {
+    display: flex; 
+    background: linear-gradient(135deg, transparent 10%,rgb(243, 185, 179) ) ;
+    /*border-bottom-style: solid;
+    border-color: black;*/
+    /*background-color: #e6ccb2;*/  }
                                 /*Div pour le menu et le titre dans le header pour que ce soit affiché l'un en dessous de l'autre*/
-.nul{
+.banniere {
     width: 100%;
     flex-direction: column;       
     justify-content: center; 
     align-items: center;
 }
 
-#logo{
+#logo {
     width: 100%;                 /*Taille max du div créé exprès pour que le logo prenne bien la taille du header*/
     height: 100%; }
 
-h1 {                             /*Pour mettre les propriétés du h1 du header plus facilement/spécifiquement*/
-        color:grey;
-        text-align: center;
-        padding-top: 1%;
-        }
+.banniere>h1 {                     /*Pour mettre les propriétés du h1 du header plus facilement/spécifiquement*/
+    color:grey;
+    text-align: center;
+    padding-top: 1%;
+    font-family:'Pacifico' ; }
 
-.conex{                          /*Div pour l'espace de connexion et le pannier, alignés à droite*/
-    float: right;
-    width: max-content;
-    /*text-align: right;*/
-    padding-top: 1.5%;
-    padding-right: 1.5%; 
+.button1 {
+                        /*Div pour les caractéristiques provisoires du "bouton" button1*/
+    align-items: center; 
+    border: 4px solid grey;
+    border-radius: 20px;  
+    box-sizing: border-box;
+    background-color: grey;
+    color: white;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 110%;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    padding: 5px 5px 5px 5px;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer; }
+
+
+.button1:hover {
+    background: rgb(243, 185, 179);
+    border: 2px solid white;
 }
 
-.connexion{                      /*Div pour les caractéristiques provisoires du "bouton" connexion*/
-    background-color: lightgray;
+.placement {               /*Placement des boutons connexion et panier*/
+    text-align: center; 
+    font-family: 'Courier New', Courier, monospace;
+    float: right;
+    padding-right: 1.5%;
+
+    /*background-color: lightgray;
     border-style: solid;
     border-color: black;
-    border-top-right-radius: 10px;             /*Arrondi en haut à droite*/
+    border-top-right-radius: 10px;           
     border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;         /*Arrondi en haut à droite*/
-    border-bottom-left-radius: 10px;
-    text-align: center; }
+    border-bottom-right-radius: 10px;         
+    border-bottom-left-radius: 10px; */ }
 
-.panier{                             /*Div pour les caractéristiques provisoires du "bouton" pannier*/
-    background-color: lightgray;
-    text-align: center;
-    border-style: solid;
-    border-color: black;
-    border-top-right-radius: 10px;             /*Arrondi en haut à droite*/
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;         /*Arrondi en haut à droite*/
-    border-bottom-left-radius: 10px; }
-
-.menuH{                              /*Menu Horizontal du header*/
-    
-   padding-top: 1.7%;
+.menuH {   
+                             /*Menu Horizontal du header*/
+    width: fit-content;
+    margin-right: 0%;
+    margin-left: 27%;
+    padding-top: 1.7%;
+    color:rgb(61, 59, 40);
     display: flex;
-    color:rgb(61, 59, 40); }
+    /* white-space:nowrap;*/  } 
 
-.menuH ul {                         /*Caractéristiques du menu pour affichage horizontal sans puces*/
+.menuH ul {                       /*Caractéristiques du menu pour affichage horizontal sans puces*/
     text-align: center;
     list-style-type: none;
     position: relative;
     width: 100%; }
 
-.menuH ul li {                       /*Caractéristiques provisoires du menu (j'ai mis ca en attendant de changer)*/
+.menuH ul li {    
+   
+                              /*Caractéristiques du menu*/
     width: 140px;
-    display: inline-block;                 /*Mise en forme*/
-    background-image:linear-gradient(to right, grey, orange); /*Dégradé pour la couleur de fond*/
-    border-bottom: 4px black solid;        /*Bordure simple noire sous les premiers éléments*/
-    border-top-right-radius: 10px;         /*Arrondi en haut à droite*/
-    border-top-left-radius: 10px;   
-}
+    float: left;  
+    background-color: grey;               
+    /*background: linear-gradient(to bottom right, purple, #eea1d7);*/
+    /*background-image:linear-gradient(to right,  rgb(247, 212, 208), rgba(128, 128, 128, 0.747));*/
+    /*border-bottom: 4px black solid;*/ }     /*Bordure simple noire sous les premiers éléments*/
 
 .menuH li {                          /*Caractéristiques provisoires du menu*/
     display: inline-block;
     float:none;
     font-family: 'Courier New', Courier, monospace; }
 
-.milieu{                              /*Div pour l'espace du milieu entre header et footer*/
+.menuH a {                             /*Caractéristiques des "options" du menu*/
+display : block;                       
+color : white;                       
+text-decoration: none; }                 
+
+.menuH  a:hover {
+  background: rgb(243, 185, 179);
+  border: 2px solid white; }
+
+
+.milieu {    
+                                  /*Div pour l'espace du milieu entre header et footer*/
         display: flex;
         flex-wrap: wrap;
+        overflow-y: auto;
         width: 100%;
-        height: 70vh; /*Je pense qu'il faut reussir a modifier ca pcq c ca qui pose pb pour le footer*/
-    }
+        min-height: 100%;
+        height: calc(100vh - 19vh); } /*Je pense qu'il faut reussir a modifier ca pcq c ca qui pose pb pour le footer*/
 
-main{                               /*Partie de droite*/
-    width: 70%;
-    background-color: #ddb892;
-    text-align: center; }
 
-nav {                                /*Partie de gauche*/
-        width: 30%; 
-        background-color: #a5907f; }
-
-.menu{                              /*Menu vertical de la partie de gauche*/
-      text-align: center; }
    
-footer {                             /*Footer*/
+main {                                 /*Partie de droite (quand y'avait encore une partie gauche)*/
+    padding : 5% 5% 5% 5%;                     
+    text-align: center;
+    /* background-color: #ddb892;*/
+    /*width: 85%*/; /*Plus besoin de la largeur pcq plus de partie gauche*/}
+
+main>p {
+    padding-bottom: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 115%;
+    text-align: justify; }
+   
+footer {    
+                   /*Footer*/
+    position:absolute;   /*Obligé de mettre en absolu pour le fixer en bas de page*/
+    bottom: 0;           /*Fixé en bas de page*/      
     width: 100%;
     height: auto;
-    position:relative;
-    bottom: 0;
-    background-color: #e6ccb2;
-    color: white;
-    text-align: center; }
+    color:grey;
+    display: inline-block;
+    background: linear-gradient(135deg, transparent 10%,rgb(243, 185, 179) ) ;
+    /*border-top-style: solid;
+    border-color: black; */ 
+    /*background-color: #e6ccb2;*/ }
+
+.infos {         /*Caractéristiques des div du footer*/
+  float: left;   /*Pour les afficher en ligne*/ }
+
+.reseauxlog {      /*Caractéristiques des logos réseaux sociaux*/
+  color: grey;
+  transition: color 0.2s;
+  text-decoration: none;
+  margin: 0 10px; }
+
+.reseauxlog:hover{  /*Passage de la souris sur les logos*/
+  color:black; }
+
+#réseaux, #mentions, #contact1, #contact2{  /*Pour placer les éléments du footer*/
+  margin-top: 2.3%; }
+
+
+#plan ul {      /*Plan du site*/
+  list-style: none; }
+
+#plan ul li a {
+  text-decoration: none;
+  color: grey; }
+
+#plan ul li a:hover{
+  color:black; }
+
+#formulaire {
+  z-index: 9;     /*Pour faire passer le formulaire en premier plan*/
+  position: fixed;
+  display: none;  /*Pas affiché par défaut*/
+  width: 15%;
+  right: 5%;
+  top: 15%;
+  background: rgba(255, 255, 255, .3);
+  padding: 0 3rem 3rem 3rem;
+  height: fit-content;
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, .3);
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
+  text-align: center; }
+
+#fermé {           /*Bouton pour fermer le formulaire de connexion*/
+  width: fit-content;
+  background-color:grey;
+  color:white; }
+        
+#formulaire p {
+  color: grey;
+  font-weight: 500;
+  opacity: .7;
+  font-size: 1.4rem;
+  margin-bottom: 60px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .2); }
+            
+#formulaire a {
+  text-decoration: none;
+  color: grey;
+  font-size: 12px; }
+          
+#formulaire a:hover {
+  text-shadow: 2px 2px 6px #00000040;
+  color: grey; }
+
+#formulaire a:link {
+  color:grey; }
+
+#formulaire a:visited {
+  color:grey; }
+          
+#formulaire a:active {
+  text-shadow: none; }
+        
+input {
+  background: transparent;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, .3);
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  padding: 1rem;
+  width: 80%;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  -moz-backdrop-filter: blur(5px);
+  color: grey;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+  transition: all .3s;
+  margin-bottom: 2em; }
+        
+input:hover, input[type="email"]:focus, input[type="mdp"]:focus {
+  background: rgba(255,255,255,0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2); }
+            
+input[type="button"] {
+  margin-left: 100%;
+  margin-top: 0;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 5%; }
+        
+::placeholder {
+  color: grey; }
+
+.infos {
+  padding : 0% 5.5% 0% 5.5%; }
+
+.infos:hover {
+  color:black; }
+       
+#illustration {
+  width: 25%; }
+
+.bulle {          /*Carcatéristiques générales des bulles de fond*/
+  border-radius: 50%;
+  background: linear-gradient(135deg, transparent 20%,rgb(243, 185, 179) ) ;
+  position: absolute; }
+
+.bulle.un {       /*Position et taille de la premiere bulle et ainsi de suite*/
+  width: 15%;
+  height: 30%;
+  top: 15%;
+  right: 10%; }
+
+.bulle.deux {
+  width: 15%;
+  height: 30%;
+  top: 40%;
+  left: 7%; }
+
+.bulle.trois {
+  width: 5%;
+  height: 10%;
+  top: 15%;
+  left: 15%; }
+
+.bulle.quatre {
+  width: 15%;
+  height: 30%;
+  top: 55%;
+  right: 15%; }
+
+.bulle.cinq {
+  width: 10%;
+  height: 20%;
+  top: 70%;
+  left: 20%;}
+
+/* Partie de gauche
+nav {                         
+        width: 15%; 
+        background: linear-gradient(to right, transparent, 50%, rgb(247, 212, 208));
+        } */
+
+/*.menu{ 
+    margin: auto;            Pour centrer le menu                 Menu vertical de la partie de gauche
+      text-align: center;
+    padding: 50% 0% 50% 0%;
+width: fit-content; }
+
+.menu>h1 {                             
+    color:grey;
+    text-align: center;
+    font-family:'Pacifico' ;
+    }
+
+.menu ul {
+    
+    padding-top: 5%;
+    margin-right: 0;
+    width: fit-content;
+    list-style-type: none;
+}
+
+.menu li {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.menu ul li {                       
+    width: 140px;                
+    background-image:linear-gradient(to right,  rgb(247, 212, 208), rgba(128, 128, 128, 0.747)); 
+    border-bottom: 2px black solid;}   
+        Bordure simple noire sous les premiers éléments
+.menu a {  
+                                Caractéristiques des "options" du menu
+display : block;                       Mise en forme
+color : #000000; 
+text-decoration: none;  }   */
