@@ -58,7 +58,7 @@ header {
     background-color: grey;
     color: white;
     display: flex;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Pacifico';
     font-size: 110%;
     justify-content: center;
     line-height: 1em;
@@ -117,7 +117,7 @@ header {
 .menuH li {                          /*Caractéristiques provisoires du menu*/
     display: inline-block;
     float:none;
-    font-family: 'Courier New', Courier, monospace; }
+    font-family: 'Pacifico'; }
 
 .menuH a {                             /*Caractéristiques des "options" du menu*/
 display : block;                       
