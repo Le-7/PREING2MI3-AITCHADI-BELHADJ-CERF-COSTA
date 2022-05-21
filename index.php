@@ -22,7 +22,7 @@
     
         <header>
             <div class="nvo">
-                <img src="/projet/img/logotest3.png" alt="logo" id="logo">
+                <img src="img/logotest3.png" alt="logo" id="logo">
             </div>
 
             <div class="banniere">
@@ -32,11 +32,11 @@
                
                 <div class="menuH">
                     <ul>
-                        <li><a href="http://localhost:8080/projet/index.php">Accueil</a></li>
-                        <li><a href="http://localhost:8080/projet/index.php?cat=c02">Tissus</a></li>
-                        <li><a href="#">Matériel</a></li>
-                        <li><a href="#">Machines</a></li>                        
-                        <li><a href="http://localhost:8080/projet/contact.html">Contact</a></li>
+                        <li><a href="http://localhost/Projet-Info-Preing2-main/index.php">Accueil</a></li>
+                        <li><a href="http://localhost/Projet-Info-Preing2-main/index.php?cat=tissu">Tissus</a></li>
+                        <li><a href="http://localhost/Projet-Info-Preing2-main/index.php?cat=materiel">Matériel</a></li>
+                        <li><a href="http://localhost/Projet-Info-Preing2-main/index.php?cat=machines">Machines</a></li>                        
+                        <li><a href="http://localhost/Projet-Info-Preing2-main/contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                             <li><a href="#">Tissus</a></li>
                             <li><a href="#">Matériel</a></li>
                             <li><a href="#">Machines</a></li>
-                            <li><a href="http://localhost:8080/projet/contact.html">Contact</a></li>
+                            <li><a href="http://localhost/Projet-Info-Preing2-main/contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </nav> -->
@@ -61,7 +61,7 @@
                     pour la réalisation de vos pièces. 
                     Soie, cotton, polyester, fils, aiguilles, machines, vous trouverez assurément votre bonheur !
                     </p>    
-                    <img src="/projet/img/tissus.jpg" alt="illustration" id="illustration">
+                    <img src="img/tissus.jpg" alt="illustration" id="illustration">
                 </main>
         </div>
         
@@ -94,11 +94,11 @@
            
             <div class="infos" id="plan">
                 <ul>
-                    <li><a href="http://localhost:8080/projet/index.php">Accueil</a></li>
-                    <li><a href="http://localhost:8080/projet/index.php?cat=c02">Tissus</a></li>
-                    <li><a href="#">Matériel</a></li>
-                    <li><a href="#">Machines</a></li>                        
-                    <li><a href="http://localhost:8080/projet/contact.html">Contact</a></li>
+                    <li><a href="http://localhost/Projet-Info-Preing2-main/index.php">Accueil</a></li>
+                    <li><a href="http://localhost/Projet-Info-Preing2-main/index.php?cat=tissu">Tissus</a></li>
+                    <li><a href="http://localhost/Projet-Info-Preing2-main/index.php?cat=materiel">Matériel</a></li>
+                    <li><a href="http://localhost/Projet-Info-Preing2-main/index.php?cat=machines">Machines</a></li>                        
+                    <li><a href="http://localhost/Projet-Info-Preing2-main/contact.html">Contact</a></li>
                 </ul>
             </div>      
         </footer>
@@ -121,12 +121,25 @@
 
         function affichage() {
         $num = explode('=',getquery());
-        $csv = array_map('str_getcsv', file('./data/exemple.csv'));
-        foreach($csv as $line){
-            if($line[4] ==$num[1] ){
-            echo "<script>main.innerHTML()='<h1>".$line[0]."</h1>'</script>"; }
+        if($num[1]!=NULL)   
+        {
+            $csv = array_map('str_getcsv', file('./data/test.csv'));
+            
+            echo "<script>document.getElementsByTagName('main')[0].innerHTML=\"<table><thead><tr><th>Photo</th><th>Nom</th><th>Stock</th><th>Prix</th></thead> <tbody>";
+            foreach($csv as $line){
+                //echo "<script> console.log('$line[2]')</script>";
+                if($line[2] ==$num[1] ){
+                echo "<tr>";    
+                echo "<td><img style='width:20%;height:20%;'src='img/".$line[3]."'></td>";
+                echo "<td>".$line[1]."</td>";
+                echo "<td>".$line[4]."</td>";
+                echo "<td>".$line[5]."</td>";
+                echo "</tr>";
+                }
+            }
+            echo "</tbody></table>\";</script>";
         }
-        }
+    }
         affichage();
     ?>
 </body>
