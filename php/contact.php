@@ -58,23 +58,23 @@
             <span class="bulle un"></span>
             <span class="bulle deux"></span>
   
-            <form>
+            <form action="traitement.php" method="post">
               <h3 class="titre">Nous contacter</h3>
               <div class="input-contenu">
-                <input type="text" name="name" class="input" placeholder="Nom prénom"/>
-                <span>Username</span>
+                <input type="text" name="nom" class="input" placeholder="Nom prénom"/>
+                
               </div>
               <div class="input-contenu">
                 <input type="email" name="email" class="input" placeholder="Email" />
-                <span>Email</span>
+                
               </div>
               <div class="input-contenu">
-                <input type="tel" name="phone" class="input" placeholder="Téléphone" />
-                <span>Telephone</span>
+                <input type="tel" name="tel" class="input" placeholder="Téléphone" />
+                
               </div>
               <div class="input-contenu textarea">
                 <textarea name="message" class="input" placeholder="Votre message"></textarea>
-                <span>Message</span>
+               
               </div>
               <input type="submit" value="Envoyer" class="bouton" />
             </form>
