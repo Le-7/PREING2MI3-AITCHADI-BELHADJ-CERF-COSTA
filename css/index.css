@@ -298,7 +298,8 @@ input[type="button"] {
 .bulle {          /*Carcatéristiques générales des bulles de fond*/
   border-radius: 50%;
   background: linear-gradient(135deg, transparent 20%,rgb(243, 185, 179) ) ;
-  position: absolute; }
+  position: absolute; 
+  pointer-events: none; }
 
 .bulle.un {       /*Position et taille de la premiere bulle et ainsi de suite*/
   width: 15%;
