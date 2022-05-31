@@ -11,7 +11,7 @@
 <body>
 
     <div class="contenu"> 
-        <form  id="formulaire" action="http://localhost/Projet-Info-Preing2-main/php/verif.php" method="POST">
+        <form  id="formulaire" action="http://localhost:8080/Projet-Info-Preing2-main/php/verif.php" method="POST">
         <input id="fermé" type="button" value="X" onclick="document.getElementById('formulaire').style.display='none'">
             <p>Bienvenue</p>
             <input type="email" placeholder="email" required> <br>
@@ -28,16 +28,16 @@
 
             <div class="banniere">
                 <h1>Couturalia</h1> 
-                <div class="placement"><button class="button1" href="http://localhost/Projet-Info-Preing2-main/php/panier.php">Panier</div>
+                <div class="placement"><button class="button1" href="http://localhost:8080/Projet-Info-Preing2-main/php/panier.php">Panier</div>
                 <div class="placement"><button class="button1" onclick="document.getElementById('formulaire').style.display='block'"> Connexion</div> 
                
                 <div class="menuH">
                     <ul>
-                        <li><a href="http://localhost/Projet-Info-Preing2-main/index.php">Accueil</a></li>
-                        <li><a href="http://localhost/Projet-Info-Preing2-main/index.php?cat=tissu">Tissus</a></li>
-                        <li><a href="http://localhost/Projet-Info-Preing2-main/index.php?cat=materiel">Matériel</a></li>
-                        <li><a href="http://localhost/Projet-Info-Preing2-main/index.php?cat=machines">Machines</a></li>                        
-                        <li><a href="http://localhost/Projet-Info-Preing2-main/php/contact.php">Contact</a></li>
+                        <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php">Accueil</a></li>
+                        <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=tissu">Tissus</a></li>
+                        <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=materiel">Matériel</a></li>
+                        <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=machines">Machines</a></li>                        
+                        <li><a href="http://localhost:8080/Projet-Info-Preing2-main/php/contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -95,11 +95,11 @@
            
             <div class="infos" id="plan">
                 <ul>
-                    <li><a href="http://localhost/Projet-Info-Preing2-main/index.php">Accueil</a></li>
-                    <li><a href="http://localhost/Projet-Info-Preing2-main/index.php?cat=tissu">Tissus</a></li>
-                    <li><a href="http://localhost/Projet-Info-Preing2-main/index.php?cat=materiel">Matériel</a></li>
-                    <li><a href="http://localhost/Projet-Info-Preing2-main/index.php?cat=machines">Machines</a></li>                        
-                    <li><a href="http://localhost/Projet-Info-Preing2-main/php/contact.php">Contact</a></li>
+                    <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php">Accueil</a></li>
+                    <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=tissu">Tissus</a></li>
+                    <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=materiel">Matériel</a></li>
+                    <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=machines">Machines</a></li>                        
+                    <li><a href="http://localhost:8080/Projet-Info-Preing2-main/php/contact.php">Contact</a></li>
                 </ul>
             </div>      
         </footer>
@@ -129,12 +129,16 @@
             echo "<script>document.getElementsByTagName('main')[0].innerHTML=\"<table><thead><tr><th>Photo</th><th>Nom</th><th>Stock</th><th>Prix</th></thead> <tbody>";
             foreach($csv as $line){
                 //echo "<script> console.log('$line[2]')</script>";
-                if($line[2] ==$num[1] ){
+                if($line[2] == $num[1] && $line[4] != 0){
                 echo "<tr>";    
-                echo "<td><img style='width:20%;height:20%;'src='img/".$line[3]."'></td>";
+                echo "<td><div class='container'><input type='checkbox' id='$line[0]'><label for='$line[0]'><img style='width:20%;height:20%;'src='img/".$line[3]."'></label></div></td>";
                 echo "<td>".$line[1]."</td>";
-                echo "<td>".$line[4]."m</td>";
-                echo "<td>".$line[5]."€</td>";
+                echo "<td>".$line[4];
+                if($num[1]!=="machines"){
+                    echo "m";
+                }
+                echo "</td>";
+                echo "<td>".$line[5]."</td>";
                 echo "<td><label for='q'>Quantité: </label>";
                 echo "<input type='range' value='1' min='1' max='$line[4]' oninput='this.nextElementSibling.value = this.value'><output>1</output>";
                 echo "<button type='button' class='add-to-cart' data-id='$line[0]' data-name='$line[1]' data-price='$line[5]'>Ajouter au panier</button>";
