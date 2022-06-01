@@ -82,7 +82,10 @@
             </div>
 
             <div class="infos" id="contact2">
-                <p style="font-size:22px">couturalia@society.com</p>  
+                <p style="font-size:22px">
+                <a href="mailto:couturalia@society.com"> 
+                couturalia@society.com </a></p> 
+                
             </div>  
 
             <div class="infos" id="mentions">
