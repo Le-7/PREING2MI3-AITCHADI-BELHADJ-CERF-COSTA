@@ -36,7 +36,7 @@
         $json[] = $demande ;
         $json = json_encode($json) ; #reconversion en json
         file_put_contents('contacter.json', $json) ; #on remet le premier msg dans le fichier json
-        echo ("<script language='Javascript'>document.location='mailto:p.dupond@example.com?subject=Sujet%20du%20courrier&body=Numero de Tel :".$demande['tel']."\n Message : \n".$demande['message']."'</script>");
+        echo ("<script language='Javascript'>document.location='mailto:p.dupond@example.com?subject=Sujet%20du%20courrier&body=Numero de Tel :".$demande['tel']."\\n Message : \\n".$demande['message']."'</script>");
 
 
     }
