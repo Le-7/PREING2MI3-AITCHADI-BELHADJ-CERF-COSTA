@@ -9,8 +9,25 @@
         $demande['date'] = date("d-m-Y  H:i") ;
         $demande['id'] = date("dmYHis") ; #pour unique 
 
-        if(!preg_match("/^[a-zA-Z-']*$/",$demande['nom'])){
-            echo"<script language='Javascript'>console.log('caca');</script>";
+        //on reteste coté serveur
+        if(!preg_match("/^[a-zA-Z-' ]*$/",$demande['nom'])){
+            echo "<script language='Javascript'>window.alert('Erreur dans le nom (format non compatible)');</script>";
+            echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contact.php?cat=nom'</script>";
+            exit;
+        }
+        if(!filter_var($demande['email'], FILTER_VALIDATE_EMAIL)){
+            echo "<script language='Javascript'>window.alert('Erreur dans l email (format non compatible ex: lesept@gmail.com)');</script>";
+            echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contact.php?cat=email'</script>";
+            exit;
+        }
+        if(!preg_match("^\d{10}$",$demande['tel'])){
+            echo "<script language='Javascript'>window.alert('Erreur dans le champs en rouge (format non compatible, numero a 10 chiffres accolés');</script>";
+            echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contact.php?cat=tel'</script>";
+            exit;
+        }
+        if(!preg_match("/^[a-zA-Z-']*$/",$demande['message'])){
+            echo "<script language='Javascript'>window.alert('Erreur dans le champs en rouge');</script>";
+            echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contact.php?cat=message'</script>";
             exit;
         }
         $json = file_get_contents('contacter.json') ; #var qui contient notre fichier json

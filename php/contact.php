@@ -65,18 +65,18 @@
                 
               </div>
               <div class="input-contenu">
-                <input type="email" name="email" class="input" placeholder="Email" />
+                <input type="email" name="email" class="input" placeholder="Email" required />
                 
               </div>
               <div class="input-contenu">
-                <input type="tel" name="tel" class="input" placeholder="Téléphone" />
+                <input type="tel" name="tel" class="input" placeholder="Téléphone" required pattern="^\d{10}$"/>
                 
               </div>
               <div class="input-contenu textarea">
-                <textarea name="message" class="input" placeholder="Votre message"></textarea>
+                <textarea name="message" class="input" placeholder="Votre message" required></textarea>
                
               </div>
-              <input type="submit" name="envoyer" value="Envoyer" class="bouton" />
+              <input type="submit" name="envoyer" value="Envoyer" class="bouton" required/>
             </form>
           </div>
         </div>
@@ -91,8 +91,8 @@
         $err = explode('=',getquery());
         if($err[1]!=NULL)   
         {
-         echo "<script language='Javascript'>console.log('$err');</script>";
-          echo"<script language='Javascript'>document.querySelectorAll('input[type=$err]').style.background='red';</script>";
+         //echo "<script language='Javascript'>console.log(document.querySelectorAll('input[name=$err[1]]')[0]);</script>";
+         echo"<script language='Javascript'>document.querySelectorAll('input[name=$err[1]]').forEach(el => el.style.background='red');</script>";
         }
     }
         affichageerror();
