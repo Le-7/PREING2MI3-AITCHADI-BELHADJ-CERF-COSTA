@@ -39,6 +39,7 @@ input[type=checkbox]:checked ~ label > img {
 }
 
 header {
+  z-index: 11;
     display: flex; 
     background: linear-gradient(135deg, transparent 10%,rgb(243, 185, 179) ) ;
     /*border-bottom-style: solid;
@@ -122,7 +123,9 @@ header {
                               /*Caractéristiques du menu*/
     width: 140px;
     float: left;  
-    background-color: grey;               
+    background-color: grey;  
+    border-top-right-radius: 10px;         
+    border-top-left-radius: 10px ;           
     /*background: linear-gradient(to bottom right, purple, #eea1d7);*/
     /*background-image:linear-gradient(to right,  rgb(247, 212, 208), rgba(128, 128, 128, 0.747));*/
     /*border-bottom: 4px black solid;*/ }     /*Bordure simple noire sous les premiers éléments*/
@@ -139,6 +142,8 @@ text-decoration: none; }
 
 .menuH  a:hover {
   background: rgb(243, 185, 179);
+  border-top-right-radius: 10px;         
+  border-top-left-radius: 10px ;
   border: 2px solid white; }
 
 
@@ -168,16 +173,18 @@ main>p {
    
 footer {    
                    /*Footer*/
+    z-index: 10;
     position:absolute;   /*Obligé de mettre en absolu pour le fixer en bas de page*/
     bottom: 0;           /*Fixé en bas de page*/      
     width: 100%;
     height: auto;
     color:grey;
     display: inline-block;
-    background: linear-gradient(135deg, transparent 10%,rgb(243, 185, 179) ) ;
+    background: linear-gradient(135deg, rgb(243, 222, 219) 10%,  rgb(243, 185, 179)) ; 
     /*border-top-style: solid;
     border-color: black; */ 
     /*background-color: #e6ccb2;*/ }
+
 
 .infos {         /*Caractéristiques des div du footer*/
   float: left;   /*Pour les afficher en ligne*/ }
@@ -209,18 +216,18 @@ footer {
   z-index: 9;     /*Pour faire passer le formulaire en premier plan*/
   position: fixed;
   display: none;  /*Pas affiché par défaut*/
+  height: fit-content;
   width: 15%;
   right: 5%;
-  top: 15%;
+  top: 16%;
   background: rgba(255, 255, 255, .8);
   padding: 0 3rem 3rem 3rem;
-  height: fit-content;
   border-radius: 20px;
   border-left: 1px solid rgba(255, 255, 255, .3);
   border-top: 1px solid rgba(255, 255, 255, .3);
-  backdrop-filter: blur(10px);
+ /*backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  -moz-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);*/
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
   text-align: center; }
 
@@ -263,9 +270,6 @@ input {
   padding: 1rem;
   width: 80%;
   border-radius: 50px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  -moz-backdrop-filter: blur(5px);
   color: grey;
   font-weight: 500;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
