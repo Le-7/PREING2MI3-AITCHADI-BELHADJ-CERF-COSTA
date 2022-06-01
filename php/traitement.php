@@ -20,7 +20,7 @@
             echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contact.php?cat=email'</script>";
             exit;
         }
-        if(!preg_match("^\d{10}$",$demande['tel'])){
+        if(!preg_match("/^[0-9]{10}$/",$demande['tel'])){
             echo "<script language='Javascript'>window.alert('Erreur dans le champs en rouge (format non compatible, numero a 10 chiffres accolés');</script>";
             echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contact.php?cat=tel'</script>";
             exit;
@@ -36,7 +36,7 @@
         $json[] = $demande ;
         $json = json_encode($json) ; #reconversion en json
         file_put_contents('contacter.json', $json) ; #on remet le premier msg dans le fichier json
-        header("location: ../index.php") ; #renvoyer sur index.php apres envoi
+        echo ("<script language='Javascript'>document.location='mailto:p.dupond@example.com?subject=Sujet%20du%20courrier&body=Numero de Tel :".$demande['tel']."\n Message : \n".$demande['message']."'</script>");
 
 
     }
@@ -57,5 +57,4 @@
         file_put_contents('contacter.json', $verif) ;
         echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contacter.php'</script>";
     }
-
-    
+?>
