@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nous contacter</title>
-    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico"/>
 </head>
 <body>
@@ -22,15 +22,15 @@
   
             <div class="info">
               <div class="information">
-                <img src="img/map.png" class="icone"/>
+                <img src="../img/map.png" class="icone"/>
                 <p>42 boulevard du port, 95100 CERGY</p>
               </div>
               <div class="information">
-                <img src="img/email.png" class="icone"/>
+                <img src="../img/email.png" class="icone"/>
                 <p>couturalia-contact@society.com</p>
               </div>
               <div class="information">
-                <img src="img/tel.png" class="icone"/>
+                <img src="../img/tel.png" class="icone"/>
                 <p> 01.77.88.92.99</p>
               </div>
             </div>
@@ -61,7 +61,7 @@
             <form action="traitement.php" method="post">
               <h3 class="titre">Nous contacter</h3>
               <div class="input-contenu">
-                <input type="text" name="nom" class="input" placeholder="Nom prénom"/>
+                <input type="text" name="nom" class="input" placeholder="Nom prénom"/> 
                 
               </div>
               <div class="input-contenu">
@@ -76,12 +76,25 @@
                 <textarea name="message" class="input" placeholder="Votre message"></textarea>
                
               </div>
-              <input type="submit" value="Envoyer" class="bouton" />
+              <input type="submit" name="envoyer" value="Envoyer" class="bouton" />
             </form>
           </div>
         </div>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
-  </html>
+    <?php
+        function getquery(){ $url = $_SERVER['REQUEST_URI'];
+            return (parse_url($url, PHP_URL_QUERY)); }
+
+        function affichageerror() {
+        $err = explode('=',getquery());
+        if($err[1]!=NULL)   
+        {
+         echo "<script language='Javascript'>console.log('$err');</script>";
+          echo"<script language='Javascript'>document.querySelectorAll('input[type=$err]').style.background='red';</script>";
+        }
+    }
+        affichageerror();
+    ?>
 </html>
