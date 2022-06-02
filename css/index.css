@@ -90,7 +90,6 @@ header {
 
 .placement {               /*Placement des boutons connexion et panier*/
     text-align: center; 
-    font-family: 'Courier New', Courier, monospace;
     float: right;
     padding-right: 1.5%;
 
@@ -159,7 +158,7 @@ text-decoration: none; }
 
    
 main {                                 /*Partie de droite (quand y'avait encore une partie gauche)*/
-    padding : 5% 5% 5% 5%;                     
+    padding : 4% 5% 5% 5%;                     
     text-align: center;
     /* background-color: #ddb892;*/
     /*width: 85%*/; /*Plus besoin de la largeur pcq plus de partie gauche*/}
@@ -169,7 +168,18 @@ main>p {
     padding-left: 2%;
     padding-right: 2%;
     font-size: 115%;
-    text-align: justify; }
+    text-align: justify;
+    font-family: 'Pacifico'; }
+
+footer a {
+    text-decoration: none;
+    color: grey;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: black;
+}
    
 footer {    
                    /*Footer*/
@@ -179,6 +189,7 @@ footer {
     width: 100%;
     height: auto;
     color:grey;
+    font-weight: bold;
     display: inline-block;
     background: linear-gradient(135deg, rgb(243, 222, 219) 10%,  rgb(243, 185, 179)) ; 
     /*border-top-style: solid;
@@ -225,6 +236,7 @@ footer {
   border-radius: 20px;
   border-left: 1px solid rgba(255, 255, 255, .3);
   border-top: 1px solid rgba(255, 255, 255, .3);
+  backdrop-filter: blur(10px);
  /*backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   -moz-backdrop-filter: blur(10px);*/
