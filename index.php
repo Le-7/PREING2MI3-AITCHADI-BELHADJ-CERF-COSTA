@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<?php session_start();?>
+<?php 
+    session_start();
+    $_SESSION['Connected'];
+    $_SESSION['ref']=[];
+    $_SESSION['nbr']=[];
+    $_SESSION['price']=[];
+?>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -9,16 +15,14 @@
     <title>COUTURALIA</title>
 </head>
 <body>
-
-    <div class="contenu"> 
-        <form  id="formulaire" action="http://localhost:8080/Projet-Info-Preing2-main/php/verif.php" method="POST">
+    <div class="contenu">
+        <form  id="formulaire" action="http://localhost:8080/Projet-Info-Preing2-main/php/connexion.php" method="POST">
         <input id="fermé" type="button" value="X" onclick="document.getElementById('formulaire').style.display='none'">
             <p>Bienvenue</p>
-            <input type="email" placeholder="email" required> <br>
-            <input type="mdp" placeholder="mot de passe"required>
-            <br>
+            <input name="login" type="text" placeholder="login" required> <br>
+            <input name="pass" type="password" placeholder="mot de passe" required> <br>
             <input type="submit" value="connexion" ><br>
-            <a href="#">Mot de passe oublié</a>
+            <a href="http://localhost:8080/Projet-Info-Preing2-main/php/inscription.php">Pas de compte? Inscrivez vous!</a>
         </form>
     
         <header>
@@ -29,7 +33,7 @@
             <div class="banniere">
                 <h1>Couturalia</h1> 
                 <div class="placement"><button class="button1" href="http://localhost:8080/Projet-Info-Preing2-main/php/panier.php">Panier</div>
-                <div class="placement"><button class="button1" onclick="document.getElementById('formulaire').style.display='block'"> Connexion</div> 
+                <div class="placement" id="connexion"><button class="button1" onclick="document.getElementById('formulaire').style.display='block'"> Connexion</div> 
                
                 <div class="menuH">
                     <ul>
@@ -42,7 +46,7 @@
                 </div>
             </div>
         </header>
-    
+
         <div class="milieu">
               <!-- <nav>
                     <div class="menu">
@@ -82,10 +86,7 @@
             </div>
 
             <div class="infos" id="contact2">
-                <p style="font-size:22px">
-                <a href="mailto:couturalia@society.com"> 
-                couturalia@society.com </a></p> 
-                
+                <p style="font-size:22px">couturalia@society.com</p>  
             </div>  
 
             <div class="infos" id="mentions">
@@ -118,6 +119,11 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        function disconnect(){
+            document.location.href = "http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=disconnect";
+        }
+    </script>
 
     <?php
         function getquery(){ $url = $_SERVER['REQUEST_URI'];
@@ -125,6 +131,17 @@
 
         function affichage() {
         $num = explode('=',getquery());
+
+        if($num[1]=="disconnect"){
+            $_SESSION['Connected'] = NULL;
+            echo "<script>document.location.href = 'http://localhost:8080/Projet-Info-Preing2-main/index.php';</script>";
+        }
+
+        if($num[1]=="not_connected"){
+            echo "<script>alert('Vous devez vous connecter pour passer commande.');</script>";
+            echo "<script>document.location.href = \'http://localhost:8080/Projet-Info-Preing2-main/index.php\';</script>";
+        }
+
         if($num[1]!=NULL)   
         {
             $csv = array_map('str_getcsv', file('./data/test.csv'));
@@ -143,8 +160,12 @@
                 echo "</td>";
                 echo "<td>".$line[5]."</td>";
                 echo "<td><label for='q'>Quantité: </label>";
-                echo "<input type='range' value='1' min='1' max='$line[4]' oninput='this.nextElementSibling.value = this.value'><output>1</output>";
-                echo "<button type='button' class='add-to-cart' data-id='$line[0]' data-name='$line[1]' data-price='$line[5]'>Ajouter au panier</button>";
+                echo "<form action='http://localhost:8080/Projet-Info-Preing2-main/php/cart.php' method='POST'>";
+                echo "<input type='range' name='value' value='1' min='1' max='$line[4]' oninput='this.nextElementSibling.value = this.value'><output>1</output>";
+                echo "<input type='hidden' name='name' value='$line[1]'>";
+                echo "<input type='hidden' name='price' value='$line[5]'>";
+                echo "<input type='submit' value='Ajouter au panier' class='add-to-cart'>";
+                echo "</form>";
                 echo "</td></tr>";
                 }
             }
@@ -152,6 +173,10 @@
         }
     }
         affichage();
+        if($_SESSION['Connected'] == 1){
+            echo"<script language='Javascript'>document.getElementById('connexion').innerHTML='<button class=\'button1\' onclick=\'disconnect()\'>Déconnexion'</script>";
+        }
+
     ?>
 </body>
 </html>
