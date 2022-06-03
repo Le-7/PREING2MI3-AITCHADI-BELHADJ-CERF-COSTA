@@ -38,7 +38,7 @@
                         <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=tissu">Tissus</a></li>
                         <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=materiel">Matériel</a></li>
                         <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=machines">Machines</a></li>                        
-                        <li><a href="http://localhost:8080/Projet-Info-Preing2-main/php/contact.php">Contact</a></li>
+                        <li id="contact"><a href="http://localhost:8080/Projet-Info-Preing2-main/php/contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -76,16 +76,14 @@
                     <a class="reseauxlog" href="https://instagram.com" target="_blank">
                         <ion-icon name="logo-instagram"></ion-icon>
                     </a>
-                        <a class="reseauxlog" href="https://github.com/Le-7/Projet-Info-Preing2" target="_blank">
+                        <a class="reseauxlog" href="https://github.com" target="_blank">
                     <ion-icon name="logo-github"></ion-icon>
                     </a>
                 </p>  
             </div>
 
             <div class="infos" id="contact2">
-                <p style="font-size:22px">
-                 <a href="mailto:couturalia@society.com?subject=Demande%20de%20contact&body=Bonjour,"> 
-                couturalia@society.com </a></p>  
+                <p style="font-size:22px">couturalia@society.com</p>  
             </div>  
 
             <div class="infos" id="mentions">
@@ -176,7 +174,10 @@
         if($_SESSION['Connected'] == 1){
             echo"<script language='Javascript'>document.getElementById('connexion').innerHTML='<button class=\'button1\' onclick=\'disconnect()\'>Déconnexion'</script>";
         }
-
+        if($_SESSION['Connected'] == 2){
+            echo"<script language='Javascript'>document.getElementById('connexion').innerHTML='<button class=\'button1\' onclick=\'disconnect()\'>Déconnexion'</script>";
+            echo"<script language='Javascript'>document.getElementById('contact').innerHTML='<a href=\'http://localhost:8080/Projet-Info-Preing2-main/php/contacter.php\'>Gestion des demandes</a>'</script>";
+        }
     ?>
 </body>
 </html>

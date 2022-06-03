@@ -31,7 +31,8 @@
             htmlspecialchars($_POST["adr2"]), 
             htmlspecialchars($_POST["city"]), 
             htmlspecialchars($_POST["country"]), 
-            htmlspecialchars($_POST["job"])
+            htmlspecialchars($_POST["job"]),
+            "0"
         ];
     
     $filename = "../data/users.csv";

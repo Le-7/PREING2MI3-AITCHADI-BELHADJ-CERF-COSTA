@@ -18,6 +18,9 @@
         if($line[0] == $login && $line[1] == $pass){
             $_SESSION['Connected'] = 1;
             $error = FALSE;
+            if($line[13] == 1){
+                $_SESSION['Connected'] = 2;
+            }
             header("Location:../index.php");
         }
     }

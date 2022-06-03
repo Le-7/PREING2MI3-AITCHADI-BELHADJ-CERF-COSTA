@@ -21,6 +21,23 @@
         function empty_cart() {
             $num = explode('=',getquery());
             if($num[1] == 'reset'){
+                $file = "../data/test.csv";
+                $f = fopen($file, 'r');
+                $f2 = fopen("../data/test2.csv", 'w+');
+                while(($data = fgetcsv($f, PHP_EOL)) !== FALSE){
+                    for($j=0 ; $j < count($_SESSION['name']) ; $j++){
+                        for($i=0 ; $i < count($data) ; $i++ ){
+                            if($data[$i] == $_SESSION['name'][$j]){
+                                $data[$i+3] += $_SESSION['nbr'][$j];
+                            }
+                        }
+                    }
+                    fputcsv($f2, $data);
+                }
+                fclose($f);
+                fclose($f2);
+                copy("../data/test2.csv", $file);
+                unlink("../data/test2.csv");
                 $_SESSION['name'] = [];
                 $_SESSION['price'] = [];
                 $_SESSION['nbr'] = [];
@@ -31,24 +48,30 @@
         }
 
         if($_SESSION['Connected'] == 1){
-            $_SESSION['price'][] = $_POST['price'];
-            $_SESSION['name'][] = $_POST['name'];
-            $_SESSION['nbr'][] = $_POST['value'];
+            if($_POST['value'] != 0){
+                $file = "../data/test.csv";
+                $f = fopen($file, 'r');
+                $f2 = fopen("../data/test2.csv", 'w+');
+                $_SESSION['price'][] = $_POST['price'];
+                $_SESSION['name'][] = $_POST['name'];
+                $_SESSION['nbr'][] = $_POST['value'];
+                while(($data = fgetcsv($f, PHP_EOL)) !== FALSE){
+                    for($i=0 ; $i < count($data) ; $i++ ){
+                        if($data[$i] == $_POST['name']){
+                            $data[$i+3] -= $_POST['value'];
+                        }
+                    }
+                    fputcsv($f2, $data);
+                }
+                fclose($f);
+                fclose($f2);
+                copy("../data/test2.csv", $file);
+                unlink("../data/test2.csv");
+            }
             $total = 0;
             $ttc = 0;
             empty_cart();
-            $file = "../data/test.csv";
-            $f = fopen($file, 'r');
-            $data = fgetcsv($f, ",");
-            for($j=1 ; $j < count($_SESSION['name']) ; $j++ ){
-                for($i=0 ; $i < count($data) ; $i++ ){
-                    if($data[$i] == $_SESSION['name'][$j]){
-                        $data[$i+2] -= $_SESSION['nbr'][$j];
-                    }
-                }
-            }
-            fputcsv($f);
-            for($i=1 ; $i < count($_SESSION['name']) ; $i++ ){
+            for($i=0 ; $i < count($_SESSION['name']) ; $i++ ){
                 echo "<p>Produit : {$_SESSION['name'][$i]}</p>";
                 echo "<p>Prix (unitaire) : {$_SESSION['price'][$i]}</p>";
                 echo "<p>Quantité : {$_SESSION['nbr'][$i]}</p>";
