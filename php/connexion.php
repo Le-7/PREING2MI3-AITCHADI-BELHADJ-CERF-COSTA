@@ -22,6 +22,6 @@
         }
     }
     if($error){
-        header("Location:/non.php");
+        header("Location:../index.php?cat=unknown");
     }
 ?>
