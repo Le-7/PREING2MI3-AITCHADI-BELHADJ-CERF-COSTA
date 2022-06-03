@@ -80,7 +80,7 @@
             $ttc = $total + 0.2*$total;
             echo "<p>Total HT : {$total} €</p>";
             echo "<p>Total TTC : {$ttc} €</p>";
-            echo "<script language='Javascript'>function mailto(){document.location='mailto:couturalia@society.com?subject=Facture &body=Commande%0A'}</script>";
+            echo "<script language='Javascript'>function mailto(){document.location='mailto:couturalia@society.com?subject=Facture numéro :".rand(0,1000000)."&body=Votre commande de".$ttc." euros nous a bien été transmise, merci d'avoir acheter chez Couturalia !%0A'}</script>";
             echo "<button onclick='mailto()'>Passer Commande";
         }
     ?>
