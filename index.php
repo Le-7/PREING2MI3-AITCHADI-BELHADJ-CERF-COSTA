@@ -2,9 +2,6 @@
 <?php 
     session_start();
     $_SESSION['Connected'];
-    $_SESSION['ref']=[];
-    $_SESSION['nbr']=[];
-    $_SESSION['price']=[];
 ?>
 <html lang="fr">
 <head>
@@ -32,7 +29,7 @@
 
             <div class="banniere">
                 <h1>Couturalia</h1> 
-                <div class="placement"><button class="button1" href="http://localhost:8080/Projet-Info-Preing2-main/php/panier.php">Panier</div>
+                <div class="placement"><button class="button1" onclick="location.href='http://localhost:8080/Projet-Info-Preing2-main/php/cart.php'">Panier</div>
                 <div class="placement" id="connexion"><button class="button1" onclick="document.getElementById('formulaire').style.display='block'"> Connexion</div> 
                
                 <div class="menuH">
@@ -132,14 +129,13 @@
         function affichage() {
         $num = explode('=',getquery());
 
-        if($num[1]=="disconnect"){
-            $_SESSION['Connected'] = NULL;
+        if($num[1]=="unknown"){
             echo "<script>document.location.href = 'http://localhost:8080/Projet-Info-Preing2-main/index.php';</script>";
         }
 
-        if($num[1]=="not_connected"){
-            echo "<script>alert('Vous devez vous connecter pour passer commande.');</script>";
-            echo "<script>document.location.href = \'http://localhost:8080/Projet-Info-Preing2-main/index.php\';</script>";
+        if($num[1]=="disconnect"){
+            $_SESSION['Connected'] = NULL;
+            echo "<script>document.location.href = 'http://localhost:8080/Projet-Info-Preing2-main/index.php';</script>";
         }
 
         if($num[1]!=NULL)   
@@ -159,14 +155,16 @@
                 }
                 echo "</td>";
                 echo "<td>".$line[5]."</td>";
-                echo "<td><label for='q'>Quantité: </label>";
-                echo "<form action='http://localhost:8080/Projet-Info-Preing2-main/php/cart.php' method='POST'>";
-                echo "<input type='range' name='value' value='1' min='1' max='$line[4]' oninput='this.nextElementSibling.value = this.value'><output>1</output>";
-                echo "<input type='hidden' name='name' value='$line[1]'>";
-                echo "<input type='hidden' name='price' value='$line[5]'>";
-                echo "<input type='submit' value='Ajouter au panier' class='add-to-cart'>";
-                echo "</form>";
-                echo "</td></tr>";
+                if($_SESSION['Connected'] == 1){
+                    echo "<td><label for='q'>Quantité: </label>";
+                    echo "<form action='http://localhost:8080/Projet-Info-Preing2-main/php/cart.php' method='POST'>";
+                    echo "<input type='range' name='value' value='1' min='1' max='$line[4]' oninput='this.nextElementSibling.value = this.value'><output>1</output>";
+                    echo "<input type='hidden' name='name' value='$line[1]'>";
+                    echo "<input type='hidden' name='price' value='$line[5]'>";
+                    echo "<input type='submit' value='Ajouter au panier' class='add-to-cart'>";
+                    echo "</form></td>";
+                }
+                echo "</tr>";
                 }
             }
             echo "</tbody></table>\";</script>";
