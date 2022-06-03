@@ -40,5 +40,5 @@
     if(8 <= strlen($_POST['pass']) && strlen($_POST['pass']) <= 20 && strlen($_POST['Homme'])+strlen($_POST['Femme'])+strlen($_POST['Autre']) == 5 && strlen(htmlspecialchars($_POST['tel'])) == 10){
         fputcsv($f, $data);
     }
-    header("http://localhost:8080/Projet-Info-Preing2-main/index.php");
+    echo "<script>document.location.href = 'http://localhost:8080/Projet-Info-Preing2-main/index.php'</script>";
 ?>
