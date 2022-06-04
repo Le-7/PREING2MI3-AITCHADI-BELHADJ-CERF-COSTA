@@ -10,7 +10,7 @@
 <body>
 
     <div class="contenu">
-        <span class="cercle1"></span>
+        <!-- Formulaire de contact-->
         <div class="formulaire">
           <div class="contact-info">
             <h3 class="titre">L'équipe Couturalia à votre écoute!</h3>
@@ -19,7 +19,8 @@
               nous vous invitons à remplir notre formulaire de contact.
               Vous pouvez également faire un tour sur nos réseaux et nous envoyer un message privé dessus !
             </p>
-  
+              
+            <!-- Infos pratiques -->
             <div class="info">
               <div class="information">
                 <img src="../img/map.png" class="icone"/>
@@ -45,7 +46,7 @@
                   <ion-icon name="logo-instagram"></ion-icon>
                 </a>
                 <a href="https://github.com" target="_blank">
-                  <ion-icon name="logo-github"></ion-icon>
+                  <ion-icon name="https://github.com/Le-7/Projet-Info-Preing2"></ion-icon>
                 </a>
                 <a href="https://pinterest.com" target="_blank">
                   <ion-icon name="logo-pinterest"></ion-icon>
@@ -53,45 +54,48 @@
               </div>
             </div>
           </div>
-  
+           <!-- Partie de droite du formulaire de contact-->
           <div class="contact-formulaire">
             <span class="bulle un"></span>
             <span class="bulle deux"></span>
   
+              <!-- Raccord au fichier traitement.php avec la méthode POST-->
             <form action="traitement.php" method="post">
               <h3 class="titre">Nous contacter</h3>
               <div class="input-contenu">
-                <input type="text" name="nom" class="input" placeholder="Nom prénom"/> 
-                
+                <input type="text" name="nom" class="input" placeholder="Nom prénom"/>   
               </div>
+                
               <div class="input-contenu">
-                <input type="email" name="email" class="input" placeholder="Email" required />
-                
+                <input type="email" name="email" class="input" placeholder="Email" required />   
               </div>
+                
               <div class="input-contenu">
-                <input type="text" name="objet" class="input" placeholder="Objet" required />
-                
+                <input type="text" name="objet" class="input" placeholder="Objet" required /> 
               </div>
+                
               <div class="input-contenu">
                 <input type="tel" name="tel" class="input" placeholder="Téléphone" required pattern="^\d{10}$"/>
-                
               </div>
+                
               <div class="input-contenu textarea">
                 <textarea name="message" class="input" placeholder="Votre message" required></textarea>
-               
               </div>
+                
               <input type="submit" name="envoyer" value="Envoyer" class="bouton" required/>
             </form>
           </div>
         </div>
+        <!-- Scripts pour utiliser ionicons-->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
-    <?php
+    <?php  
+        #Récupération de la query dans l'url
         function getquery(){ $url = $_SERVER['REQUEST_URI'];
             return (parse_url($url, PHP_URL_QUERY)); }
 
-        function affichageerror() {
+        function affichageerror() {  #Fonction pour afficher les erreurs dans le formulaire
         $err = explode('=',getquery());
         if($err[1]!=NULL)   
         {
