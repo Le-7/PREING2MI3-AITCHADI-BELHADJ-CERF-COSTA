@@ -10,7 +10,7 @@
 </head>
 
 <?php
-    $genre = '';
+    $genre = '';                            //on recupere toutes les données pour creer un compte
     if(strlen($_POST['Homme']) == 5){
         $genre = 'Homme';
     }elseif(strlen($_POST['Femme']) == 5){
@@ -19,7 +19,7 @@
         $genre = 'Autre';
     }
 
-    $data = [htmlspecialchars($_POST["login"]), 
+    $data = [htmlspecialchars($_POST["login"]),  //voici toutes les données qui seront mis dans le user.csv 
             htmlspecialchars($_POST["pass"]), 
             htmlspecialchars($_POST["Nom"]), 
             htmlspecialchars($_POST["Prénom"]), 
@@ -36,9 +36,9 @@
         ];
     
     $filename = "../data/users.csv";
-    $f = fopen($filename, 'a+');
+    $f = fopen($filename, 'a+'); //on verifie puis inscrit les données
     if(8 <= strlen($_POST['pass']) && strlen($_POST['pass']) <= 20 && strlen($_POST['Homme'])+strlen($_POST['Femme'])+strlen($_POST['Autre']) == 5 && strlen(htmlspecialchars($_POST['tel'])) == 10){
         fputcsv($f, $data);
     }
-    echo "<script>document.location.href = 'http://localhost:8080/Projet-Info-Preing2-main/index.php'</script>";
+    echo "<script>document.location.href = 'http://localhost:8080/Projet-Info-Preing2-main/index.php'</script>"; //redirection plus souple qu avec header grace a du JS
 ?>
