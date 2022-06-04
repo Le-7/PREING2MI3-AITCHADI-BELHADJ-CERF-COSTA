@@ -49,6 +49,7 @@
             </div>
         </header>
             <!--Contenu principal de la page courante-->
+            <div class="milieu">
                 <main> 
                     <p>Chez Couturalia, qualité et professionnalisme à votre service.
                     Que vous soyiez débutants, amateurs ou professionnels, vous trouverez tout le matériel nécessaire
@@ -57,6 +58,7 @@
                     </p>    
                     <img src="img/tissus.jpg" alt="illustration" id="illustration">
                 </main>
+            </div>
         
         <footer>
             <!--Pied de page commun à tous les catalogues du site-->
