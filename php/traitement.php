@@ -1,5 +1,5 @@
 <?php
-    if(isset($_POST['nom'])){  
+    if(isset($_POST['nom'])){  //On créé une boucle pour récup les données
 
         $demande = array() ;
         $demande['nom'] = $_POST['nom'] ;
@@ -8,9 +8,9 @@
         $demande['tel'] = $_POST['tel'] ;
         $demande['message'] = $_POST['message'] ;
         $demande['date'] = date("d-m-Y  H:i") ;
-        $demande['id'] = date("dmYHis") ; #pour un id unique par demande 
+        $demande['id'] = date("dmYHis") ; #Création d'un id unique par utilisateur
 
-        //on reteste coté serveur
+        //on teste coté serveur les données
         if(!preg_match("/^[a-zA-Z-' ]*$/",$demande['nom'])){
             echo "<script language='Javascript'>window.alert('Erreur dans le nom (format non compatible)');</script>";
             echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contact.php?cat=nom'</script>";
