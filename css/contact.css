@@ -282,13 +282,6 @@
       right: 70px;
     }
   
-  
-    .cercle1 {
-      bottom: 75%;
-      transform: scale(0.9) translate(-40%, 30%);
-      right: 50%;
-    }
-  
     .text {
       margin: 1rem 0 1.5rem 0;
     }
@@ -307,9 +300,6 @@
       display: none;
     }
   
-    .cercle1 {
-      display: none;
-    }
   
     form, .contact-info {
       padding: 1.7rem 1.6rem;
