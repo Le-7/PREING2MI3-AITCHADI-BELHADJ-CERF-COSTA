@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0; }
 
-                                /*Pour faire en sorte que l'affichage prenne la taille de l'écran
-                                 background: linear-gradient(to right, transparent, 30%, rgb(247, 212, 208))*/
+                                /*Pour faire en sorte que l'affichage prenne la taille de l'écran*/
 html {
     height: 100%;}
 
