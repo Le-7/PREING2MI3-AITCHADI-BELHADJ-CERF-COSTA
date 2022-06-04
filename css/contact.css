@@ -38,7 +38,7 @@
     position: relative;
   }
   
-  .bulle {
+  .bulle {       /*Petites bulles comme sur la page principale*/
     border-radius: 50%;
     background: linear-gradient(135deg, transparent 20%,rgb(243, 185, 179) ) ;
     position: absolute;
@@ -137,7 +137,6 @@
     font-size: 0.95rem;
     color:  rgb(243, 185, 179);
     line-height: 1;
-    /*border-radius: 25px;*/
     outline: none;
     cursor: pointer;
     transition: 0.3s;
@@ -153,7 +152,7 @@
     position: absolute;
     top: 0;
     left: 25px;
-    transform: translateY(-50%);
+    transform: translateY(-50%); /*Pour déplacement vertical*/
     font-size: 0.8rem;
     padding: 0 0.4rem;
     color: transparent;
