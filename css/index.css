@@ -1,5 +1,5 @@
 /*CSS 
-AIT CHADI Anissa, BELLHAJ Dillan, CERF Fabien, COSTA Mathéo
+AIT CHADI Anissa, BELHADJ Dillan, CERF Fabien, COSTA Mathéo
 PRÉING2 MI 3*/
 
 
@@ -8,8 +8,7 @@ PRÉING2 MI 3*/
     margin: 0;
     padding: 0; }
 
-                                /*Pour faire en sorte que l'affichage prenne la taille de l'écran
-                                 background: linear-gradient(to right, transparent, 30%, rgb(247, 212, 208))*/
+                                /*Pour faire en sorte que l'affichage prenne la taille de l'écran*/
 html {
     height: 100%;}
 
@@ -42,15 +41,10 @@ header {
   z-index: 11;
     display: flex; 
     background: linear-gradient(135deg, transparent 10%,rgb(243, 185, 179) ) ;
-    /*border-bottom-style: solid;
-    border-color: black;*/
-    /*background-color: #e6ccb2;*/  }
+    }
                                 /*Div pour le menu et le titre dans le header pour que ce soit affiché l'un en dessous de l'autre*/
 .banniere {
     width: 100%;
-    flex-direction: column;       
-    justify-content: center; 
-    align-items: center;
 }
 
 #logo {
@@ -91,15 +85,7 @@ header {
 .placement {               /*Placement des boutons connexion et panier*/
     text-align: center; 
     float: right;
-    padding-right: 1.5%;
-
-    /*background-color: lightgray;
-    border-style: solid;
-    border-color: black;
-    border-top-right-radius: 10px;           
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;         
-    border-bottom-left-radius: 10px; */ }
+    padding-right: 1.5%;}
 
 .menuH {   
                              /*Menu Horizontal du header*/
@@ -108,8 +94,7 @@ header {
     margin-left: 27%;
     padding-top: 1.7%;
     color:rgb(61, 59, 40);
-    display: flex;
-    /* white-space:nowrap;*/  } 
+    display: flex; } 
 
 .menuH ul {                       /*Caractéristiques du menu pour affichage horizontal sans puces*/
     text-align: center;
@@ -124,10 +109,7 @@ header {
     float: left;  
     background-color: grey;  
     border-top-right-radius: 10px;         
-    border-top-left-radius: 10px ;           
-    /*background: linear-gradient(to bottom right, purple, #eea1d7);*/
-    /*background-image:linear-gradient(to right,  rgb(247, 212, 208), rgba(128, 128, 128, 0.747));*/
-    /*border-bottom: 4px black solid;*/ }     /*Bordure simple noire sous les premiers éléments*/
+    border-top-left-radius: 10px ;  }  
 
 .menuH li {                          /*Caractéristiques provisoires du menu*/
     display: inline-block;
@@ -145,23 +127,11 @@ text-decoration: none; }
   border-top-left-radius: 10px ;
   border: 2px solid white; }
 
-
-.milieu {    
-                                  /*Div pour l'espace du milieu entre header et footer*/
-        display: flex;
-        flex-wrap: wrap;
-        overflow-y: auto;
-        width: 100%;
-        min-height: 100%;
-        height: calc(100vh - 19vh); } /*Je pense qu'il faut reussir a modifier ca pcq c ca qui pose pb pour le footer*/
-
-
    
-main {                                 /*Partie de droite (quand y'avait encore une partie gauche)*/
+main {                                 /*Partie centrale*/
     padding : 4% 5% 5% 5%;                     
     text-align: center;
-    /* background-color: #ddb892;*/
-    /*width: 85%*/; /*Plus besoin de la largeur pcq plus de partie gauche*/}
+    }
 
 main>p {
     padding-bottom: 3%;
@@ -236,10 +206,7 @@ footer {
   border-radius: 20px;
   border-left: 1px solid rgba(255, 255, 255, .3);
   border-top: 1px solid rgba(255, 255, 255, .3);
-  backdrop-filter: blur(10px);
- /*backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  -moz-backdrop-filter: blur(10px);*/
+  backdrop-filter: blur(10px); /*Pour effet flou derrière*/
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
   text-align: center; }
 
@@ -274,7 +241,7 @@ footer {
 #formulaire a:active {
   text-shadow: none; }
         
-input {
+input {        /*Caractéristiques des inputs*/
   background: transparent;
   border: none;
   border-left: 1px solid rgba(255, 255, 255, .3);
@@ -346,44 +313,3 @@ input[type="button"] {
   height: 20%;
   top: 70%;
   left: 20%;}
-
-/* Partie de gauche
-nav {                         
-        width: 15%; 
-        background: linear-gradient(to right, transparent, 50%, rgb(247, 212, 208));
-        } */
-
-/*.menu{ 
-    margin: auto;            Pour centrer le menu                 Menu vertical de la partie de gauche
-      text-align: center;
-    padding: 50% 0% 50% 0%;
-width: fit-content; }
-
-.menu>h1 {                             
-    color:grey;
-    text-align: center;
-    font-family:'Pacifico' ;
-    }
-
-.menu ul {
-    
-    padding-top: 5%;
-    margin-right: 0;
-    width: fit-content;
-    list-style-type: none;
-}
-
-.menu li {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.menu ul li {                       
-    width: 140px;                
-    background-image:linear-gradient(to right,  rgb(247, 212, 208), rgba(128, 128, 128, 0.747)); 
-    border-bottom: 2px black solid;}   
-        Bordure simple noire sous les premiers éléments
-.menu a {  
-                                Caractéristiques des "options" du menu
-display : block;                       Mise en forme
-color : #000000; 
-text-decoration: none;  }   */
