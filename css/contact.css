@@ -264,29 +264,6 @@
     opacity: 0.5;
   }
   
-  .cercle1 {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background: linear-gradient(to bottom, rgb(247, 212, 208),  rgb(243, 185, 179));
-    bottom: 50%;
-    right: 50%;
-    transform: translate(-40%, 38%);
-  }
-  
-  .cercle1:after {
-    content: "";
-    position: absolute;
-    width: 360px;
-    height: 360px;
-    background-color: #fafafa;
-    border-radius: 50%;
-    top: calc(50% - 180px);
-    left: calc(50% - 180px);
-  }
-  
-  
   @media (max-width: 850px) {
     .formulaire {
       grid-template-columns: 1fr;
