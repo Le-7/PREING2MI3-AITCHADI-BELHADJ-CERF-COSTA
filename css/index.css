@@ -127,6 +127,14 @@ text-decoration: none; }
   border-top-left-radius: 10px ;
   border: 2px solid white; }
 
+.milieu {    
+                                  /*Div pour l'espace du milieu entre header et footer*/
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        width: 100%;
+        min-height: 100%;
+        height: calc(100vh - 19vh); /*Calcul pour taille */ } 
    
 main {                                 /*Partie centrale*/
     padding : 4% 5% 5% 5%;                     
