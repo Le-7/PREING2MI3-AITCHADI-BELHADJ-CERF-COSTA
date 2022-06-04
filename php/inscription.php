@@ -10,12 +10,14 @@
 </head>
 
 <body>
+    <!--Forumlaire d'inscription-->
     <form class="contact-formulaire" id="formulaire" action="http://localhost:8080/Projet-Info-Preing2-main/php/verif.php" method="POST">
         <a class="titre" href="http://localhost:8080/Projet-Info-Preing2-main/index.php">Retour à l'Accueil</a>
         <p>Bienvenue</p>
         <label for="login">Login</label>
         <input class="input-contenu" name="login" type="text" placeholder="login" required> <br>
         <label for="pass">Mot de passe (8 à 20 caractères)</label>
+        <!--Mot de passe (vérification de la longueur)-->
         <input class="input-contenu" name="pass" type="password" minlength="8" maxlength="20" placeholder="mot de passe"required> <br>
         <label>Nom</label>
         <input class="input-contenu" name="Nom" type="text" placeholder="Nom" required> <br>
@@ -39,10 +41,13 @@
             </div>
         </fieldset>
         <label>Adresse mail</label>
+        <!--Adresse mail avec vérification de la présence du @-->
         <input class="input-contenu" name="mail" type="email" placeholder="email" required> <br>
         <label>Téléphone (sans espace)</label>
+        <!--Téléphone au format 0XXXXXXXXX avec vérification de la longueur et du contenu (chiffres)-->
         <input class="input-contenu" name="tel" type="tel" pattern="[0-9]{10}" placeholder="Ex. 06XXXXXXXX" required> <br>
         <label>Date de naissance</label>
+        <!--Date de naissance, vérification du format 'date'-->
         <input class="input-contenu" name="date" type="date" placeholder="date de naissance" required> <br>
         <fieldset>
             <legend>Adresse</legend>
