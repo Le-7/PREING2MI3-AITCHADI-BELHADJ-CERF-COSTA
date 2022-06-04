@@ -48,8 +48,6 @@
                 </div>
             </div>
         </header>
-
-        <div class="milieu">
             <!--Contenu principal de la page courante-->
                 <main> 
                     <p>Chez Couturalia, qualité et professionnalisme à votre service.
@@ -59,7 +57,6 @@
                     </p>    
                     <img src="img/tissus.jpg" alt="illustration" id="illustration">
                 </main>
-        </div>
         
         <footer>
             <!--Pied de page commun à tous les catalogues du site-->
