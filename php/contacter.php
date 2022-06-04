@@ -26,7 +26,7 @@
                 
                     <?php echo$demande[$i]['message']; ?> <br>
                 
-                <b class="date"> <?php echo$demande[$i]['date']; ?></b><br> </p>
+                <b> <?php echo$demande[$i]['date']; ?></b><br> </p>
                 
             </div>
             
