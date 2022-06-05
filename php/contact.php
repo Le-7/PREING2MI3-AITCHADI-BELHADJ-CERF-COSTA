@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- AIT CHADI Anissa, BELHADJ Dillan, CERF Fabien COSTA Mathéo
+PréING2 MI Groupe 3-->
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
