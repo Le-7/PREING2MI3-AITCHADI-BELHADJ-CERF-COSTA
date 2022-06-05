@@ -11,7 +11,7 @@ PréING2 MI Groupe 3-->
 
 <body>
     <!--Bouton de retour au magasin-->
-    <a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA/index.php">Revenir au magasin</a>
+    <a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php">Revenir au magasin</a>
 
     <?php session_start(); ?>
     <?php
@@ -99,7 +99,7 @@ PréING2 MI Groupe 3-->
         }
     ?>
     <!--Bouton pour vider le panier-->
-    <button class='button1' onclick="location.href='http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA/php/cart.php?cat=reset'">Vider le panier
+    <button class='button1' onclick="location.href='http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/cart.php?cat=reset'">Vider le panier
 </body>
 
 </html>
