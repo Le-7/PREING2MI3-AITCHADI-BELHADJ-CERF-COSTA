@@ -14,7 +14,7 @@ Alors alors... Voici les différentes étapes :
 
 * Démarrer un serveur local sur le port 8080.
 * Acceder via ce serveur a la racine de notre projet via un navigateur de votre choix (nous avons développé sur Chrome), 
-exemple: "http://localhost:8080/Projet-Info-Preing2-main/index.php".
+exemple: "http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php".
 * Profiter de la navigation intuitive sur notre super site et tester toutes les fonctionnalitées.
 
 (PS : Identifiants administrateurs : Login = *Admin* Mot de passe = *password*)
