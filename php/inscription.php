@@ -13,8 +13,8 @@ PréING2 MI Groupe 3-->
 
 <body>
     <!--Forumlaire d'inscription-->
-    <form class="contact-formulaire" id="formulaire" action="http://localhost:8080/Projet-Info-Preing2-main/php/verif.php" method="POST">
-        <a class="titre" href="http://localhost:8080/Projet-Info-Preing2-main/index.php">Retour à l'Accueil</a>
+    <form class="contact-formulaire" id="formulaire" action="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/verif.php" method="POST">
+        <a class="titre" href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php">Retour à l'Accueil</a>
         <p>Bienvenue</p>
         <label for="login">Login</label>
         <input class="input-contenu" name="login" type="text" placeholder="login" required> <br>
