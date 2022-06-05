@@ -45,8 +45,8 @@
                 <a href="https://instagram.com" target="_blank">
                   <ion-icon name="logo-instagram"></ion-icon>
                 </a>
-                <a href="https://github.com" target="_blank">
-                  <ion-icon name="https://github.com/Le-7/Projet-Info-Preing2"></ion-icon>
+                <a href="https://github.com/Le-7/Projet-Info-Preing2" target="_blank">
+                  <ion-icon name="logo-github"></ion-icon>
                 </a>
                 <a href="https://pinterest.com" target="_blank">
                   <ion-icon name="logo-pinterest"></ion-icon>
