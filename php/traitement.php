@@ -16,22 +16,22 @@ PréING2 MI Groupe 3
         //on teste coté serveur les données
         if(!preg_match("/^[a-zA-Z-' ]*$/",$demande['nom'])){
             echo "<script language='Javascript'>window.alert('Erreur dans le nom (format non compatible)');</script>";
-            echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contact.php?cat=nom'</script>";
+            echo "<script language='Javascript'>document.location='http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/contact.php?cat=nom'</script>";
             exit;
         }
         if(!filter_var($demande['email'], FILTER_VALIDATE_EMAIL)){
             echo "<script language='Javascript'>window.alert('Erreur dans l email (format non compatible ex: lesept@gmail.com)');</script>";
-            echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contact.php?cat=email'</script>";
+            echo "<script language='Javascript'>document.location='http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/contact.php?cat=email'</script>";
             exit;
         }
         if(!preg_match("/^[0-9]{10}$/",$demande['tel'])){
             echo "<script language='Javascript'>window.alert('Erreur dans le champs en rouge (format non compatible, numero a 10 chiffres accolés');</script>";
-            echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contact.php?cat=tel'</script>";
+            echo "<script language='Javascript'>document.location='http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/contact.php?cat=tel'</script>";
             exit;
         }
         /*if(!preg_match("/^[a-zA-Z-']*$/",$demande['message'])){
             echo "<script language='Javascript'>window.alert('Erreur dans le champs en rouge (texte');</script>";
-            echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contact.php?cat=message'</script>";
+            echo "<script language='Javascript'>document.location='http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/contact.php?cat=message'</script>";
             exit;
         }       Si on veut rajouter un regex pour le message*/ 
         $json = file_get_contents('contacter.json') ; #var qui contient notre fichier json sous forme de tableau
@@ -57,6 +57,6 @@ PréING2 MI Groupe 3
         }
         $verif = json_encode($verif);   #on remet en json
         file_put_contents('contacter.json', $verif) ;  #on remet le contenu du msg dans le json puis on réactualise la page
-        echo "<script language='Javascript'>document.location='http://localhost:8080/Projet-Info-Preing2-main/php/contacter.php'</script>";
+        echo "<script language='Javascript'>document.location='http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/contacter.php'</script>";
     }
 ?>
