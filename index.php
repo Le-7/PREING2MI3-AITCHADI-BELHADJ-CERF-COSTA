@@ -174,7 +174,7 @@
         //Si connecté en tant qu'admin, changer, en plus, le formulaire de contact par la page de gestion des demandes
         if($_SESSION['Connected'] == 2){
             echo"<script language='Javascript'>document.getElementById('connexion').innerHTML='<button class=\'button1\' onclick=\'disconnect()\'>Déconnexion'</script>";
-            echo"<script language='Javascript'>document.getElementById('contact').innerHTML='<a href=\'http://localhost:8080/Projet-Info-Preing2-main/php/contacter.php\'>Gestion des demandes</a>'</script>";
+            echo"<script language='Javascript'>document.getElementById('contact').innerHTML='<a href=\'http://localhost:8080/Projet-Info-Preing2-main/php/contacter.php\'>Demandes</a>'</script>";
         }
     ?>
 </body>
