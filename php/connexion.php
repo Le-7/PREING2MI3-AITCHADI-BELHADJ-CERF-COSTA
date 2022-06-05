@@ -6,7 +6,7 @@ PréING2 MI Groupe 3-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA/css/index.css" />
+    <link rel="stylesheet" href="PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/css/index.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
     <title>Verif</title>
 </head>
