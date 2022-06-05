@@ -6,7 +6,7 @@ PréING2 MI Groupe 3-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Projet-Info-PreIng2-main/css/index.css" />
+    <link rel="stylesheet" href="PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/css/index.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
     <title>Verif</title>
 </head>
@@ -42,5 +42,5 @@ PréING2 MI Groupe 3-->
     if(8 <= strlen($_POST['pass']) && strlen($_POST['pass']) <= 20 && strlen($_POST['Homme'])+strlen($_POST['Femme'])+strlen($_POST['Autre']) == 5 && strlen(htmlspecialchars($_POST['tel'])) == 10){
         fputcsv($f, $data);
     }
-    echo "<script>document.location.href = 'http://localhost:8080/Projet-Info-Preing2-main/index.php'</script>"; //redirection plus souple qu avec header grace a du JS
+    echo "<script>document.location.href = 'http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php'</script>"; //redirection plus souple qu avec header grace a du JS
 ?>
