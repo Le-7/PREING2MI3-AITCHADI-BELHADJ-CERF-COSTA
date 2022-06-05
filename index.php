@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!--AIT CHADI Anissa, BELHADJ Dillan, CERF Fabien COSTA Mathéo
+PréING2 MI Groupe 3-->
 <?php 
     session_start();
 //Variable de session : 0 = Déconnecté ; 1 = Connecté ; 2 = Connecté en tant qu'administrateur
