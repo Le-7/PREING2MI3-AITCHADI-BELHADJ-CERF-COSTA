@@ -17,14 +17,14 @@ PréING2 MI Groupe 3-->
 <body>
     <div class="contenu">
         <!--Formulaire de connexion-->
-        <form  id="formulaire" action="http://localhost:8080/Projet-Info-Preing2-main/php/connexion.php" method="POST">
+        <form  id="formulaire" action="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/connexion.php" method="POST">
         <input id="fermé" type="button" value="X" onclick="document.getElementById('formulaire').style.display='none'">
             <p>Bienvenue</p>
             <input name="login" type="text" placeholder="login" required> <br>
             <input name="pass" type="password" placeholder="mot de passe" required> <br>
             <input type="submit" value="connexion" ><br>
             <!--Lien vers la page d'inscription-->
-            <a href="http://localhost:8080/Projet-Info-Preing2-main/php/inscription.php">Pas de compte? Inscrivez vous!</a>
+            <a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/inscription.php">Pas de compte? Inscrivez vous!</a>
         </form>
     
         <header>
@@ -35,17 +35,17 @@ PréING2 MI Groupe 3-->
             <div class="banniere">
                 <h1>Couturalia</h1> 
                 <!--Boutons redirigeant vers le panier // Ouvrant le formulaire de connexion-->
-                <div class="placement"><button class="button1" onclick="location.href='http://localhost:8080/Projet-Info-Preing2-main/php/cart.php'">Panier</div>
+                <div class="placement"><button class="button1" onclick="location.href='http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/cart.php'">Panier</div>
                 <div class="placement" id="connexion"><button class="button1" onclick="document.getElementById('formulaire').style.display='block'"> Connexion</div> 
                
                 <div class="menuH">
                     <!--Menu des différentes pages du site-->
                     <ul>
-                        <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php">Accueil</a></li>
-                        <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=tissu">Tissus</a></li>
-                        <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=materiel">Matériel</a></li>
-                        <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=machines">Machines</a></li>                        
-                        <li id="contact"><a href="http://localhost:8080/Projet-Info-Preing2-main/php/contact.php">Contact</a></li>
+                        <li><a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php">Accueil</a></li>
+                        <li><a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php?cat=tissu">Tissus</a></li>
+                        <li><a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php?cat=materiel">Matériel</a></li>
+                        <li><a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php?cat=machines">Machines</a></li>                        
+                        <li id="contact"><a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -72,7 +72,7 @@ PréING2 MI Groupe 3-->
                     <a class="reseauxlog" href="https://instagram.com" target="_blank">
                         <ion-icon name="logo-instagram"></ion-icon>
                     </a>
-                        <a class="reseauxlog" href="https://github.com/Le-7/Projet-Info-Preing2" target="_blank">
+                        <a class="reseauxlog" href="https://github.com/Le-7/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA" target="_blank">
                     <ion-icon name="logo-github"></ion-icon>
                     </a>
                 </p>  
@@ -93,11 +93,11 @@ PréING2 MI Groupe 3-->
            
             <div class="infos" id="plan">
                 <ul>
-                    <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php">Accueil</a></li>
-                    <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=tissu">Tissus</a></li>
-                    <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=materiel">Matériel</a></li>
-                    <li><a href="http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=machines">Machines</a></li>                        
-                    <li><a href="http://localhost:8080/Projet-Info-Preing2-main/php/contact.php">Contact</a></li>
+                    <li><a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php">Accueil</a></li>
+                    <li><a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php?cat=tissu">Tissus</a></li>
+                    <li><a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php?cat=materiel">Matériel</a></li>
+                    <li><a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php?cat=machines">Machines</a></li>                        
+                    <li><a href="http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/contact.php">Contact</a></li>
                 </ul>
             </div>      
         </footer>
@@ -116,7 +116,7 @@ PréING2 MI Groupe 3-->
     <!--Fonction pour la déconnexion-->
     <script>
         function disconnect(){
-            document.location.href = "http://localhost:8080/Projet-Info-Preing2-main/index.php?cat=disconnect";
+            document.location.href = "http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php?cat=disconnect";
         }
     </script>
 
@@ -130,12 +130,12 @@ PréING2 MI Groupe 3-->
             $num = explode('=',getquery());
 
             if($num[1]=="unknown"){
-                echo "<script>document.location.href = 'http://localhost:8080/Projet-Info-Preing2-main/index.php';</script>";
+                echo "<script>document.location.href = 'http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php';</script>";
             }
 
             if($num[1]=="disconnect"){
                 $_SESSION['Connected'] = NULL;
-                echo "<script>document.location.href = 'http://localhost:8080/Projet-Info-Preing2-main/index.php';</script>";
+                echo "<script>document.location.href = 'http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/index.php';</script>";
             }
 
             if($num[1]!=NULL)   
@@ -155,7 +155,7 @@ PréING2 MI Groupe 3-->
                         echo "<td>".$line[5]."</td>";
                         if($_SESSION['Connected'] == 1){
                             echo "<td><label for='q'>Quantité: </label>";
-                            echo "<form action='http://localhost:8080/Projet-Info-Preing2-main/php/cart.php' method='POST'>";
+                            echo "<form action='http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/cart.php' method='POST'>";
                             echo "<input type='range' name='value' value='1' min='1' max='$line[4]' oninput='this.nextElementSibling.value = this.value'><output>1</output>";
                             echo "<input type='hidden' name='name' value='$line[1]'>";
                             echo "<input type='hidden' name='price' value='$line[5]'>";
@@ -176,7 +176,7 @@ PréING2 MI Groupe 3-->
         //Si connecté en tant qu'admin, changer, en plus, le formulaire de contact par la page de gestion des demandes
         if($_SESSION['Connected'] == 2){
             echo"<script language='Javascript'>document.getElementById('connexion').innerHTML='<button class=\'button1\' onclick=\'disconnect()\'>Déconnexion'</script>";
-            echo"<script language='Javascript'>document.getElementById('contact').innerHTML='<a href=\'http://localhost:8080/Projet-Info-Preing2-main/php/contacter.php\'>Demandes</a>'</script>";
+            echo"<script language='Javascript'>document.getElementById('contact').innerHTML='<a href=\'http://localhost:8080/PREING2MI3-AITCHADI-BELHADJ-CERF-COSTA-main/php/contacter.php\'>Demandes</a>'</script>";
         }
     ?>
 </body>
