@@ -1,3 +1,6 @@
+#AIT CHADI Anissa, BELHADJ Dillan, CERF Fabien COSTA Mathéo
+PréING2 MI Groupe 3
+
 <?php
     if(isset($_POST['nom'])){  //On créé une boucle pour récup les données
 
